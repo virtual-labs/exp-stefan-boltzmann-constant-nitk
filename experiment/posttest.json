@@ -2,38 +2,89 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "A body radiates heat at the rate of 4 cal/m2/s, when its temperature is 227°C. what is the heat radiated by the same body when its temperature is 727°C",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "8 cal/m^2/s",
+        "b": "16 cal/m^2/s",
+        "c": "64 cal/m^2/s ",
+        "d": "None of the above"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
-      "correctAnswer": "a",
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "The heat transfer equation Q = σAT4 is called",
+      "answers": {
+        "a": "Newton’s law",
+        "b": "Stefan-Boltzmann law",
+        "c": "Poisson law",
+        "d": "Fourier law"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": " Calculate the radiant flux density from a black surface at 400 degree Celsius?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "1631.7 W/m^2",
+        "b": "31.7 W/m^2",
+        "c": "631.7 W/m^2",
+        "d": "11631.7 W/m^2 "
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the wavelength band for solar radiation?",
+      "answers": {
+        "a": "1 * 10 ^-1 to ^3 micron meter",
+        "b": "1 * 10 ^-1 to ^2 micron meter",
+        "c": "1 * 10 ^-1 to ^1 micron meter",
+        "d": "1 * 10 ^-1 to ^10 micron meter"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "A furnace having inside temperature of 2250 has a glass circular viewing of 6 cm diameter. If the transmissivity of glass is 0.08, make calculations for the heat loss from the glass window due to radiation",
+      "answers": {
+        "a": "234.54 W",
+        "b": "652.32 W",
+        "c": "328.53 W",
+        "d": "762.32 W"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "advanced"
     }
   ]
 }
