@@ -1,1 +1,1 @@
-## Experiment name
+## Stefan Boltzmann Constant

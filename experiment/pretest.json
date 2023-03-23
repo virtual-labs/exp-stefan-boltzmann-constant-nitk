@@ -2,38 +2,90 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The unit with Stefan-Boltzman constant is",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "W/m^2",
+        "b": "W/m^2k",
+        "c": "W/m^2k^4",
+        "d":"W/mk"
+        
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The rate at which is energy is radiated by a black body at an absolute temperature is given by",
+      "answers": {
+        "a": "Grashof law",
+        "b": "Prandtl law ",
+        "c": "Nusselt law ",
+        "d": "Stefan-Boltzmann law"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "All grey bodies obey the",
+      "answers": {
+        "a": "Stefan-boltzmann's law",
+        "b": "Planck's law",
+        "c": "Kirchhoff's law",
+        "d": "Law of inertia"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Newton’s Law of cooling is an approximate form of",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Wien displacement law",
+        "b": "Stefan’s law",
+        "c": "Kirchoff's law",
+        "d": "Jean’s law"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "According to Stefan-Boltzmann Law, the emissive power is directly proportional to the fourth power of its absolute temperature. This applies to",
+      "answers": {
+        "a": "White body",
+        "b": "Gray body",
+        "c": "Green body",
+        "d": "Black body"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
     }
   ]
 }
