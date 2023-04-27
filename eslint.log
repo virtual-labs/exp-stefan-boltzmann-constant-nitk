@@ -1,0 +1,65 @@
+
+/home/runner/work/exp-stefan-boltzmann-constant-nitk/exp-stefan-boltzmann-constant-nitk/experiment/simulation/js/co.js
+    2:5   warning  'v' is assigned a value but never used            no-unused-vars
+    3:5   warning  'vf' is assigned a value but never used           no-unused-vars
+    6:5   warning  'commenttext' is assigned a value but never used  no-unused-vars
+    7:5   warning  'calctext' is assigned a value but never used     no-unused-vars
+    8:5   warning  'commentloc' is assigned a value but never used   no-unused-vars
+   15:5   warning  'simTimeId' is assigned a value but never used    no-unused-vars
+   18:5   warning  'time' is assigned a value but never used         no-unused-vars
+   24:5   warning  'th' is assigned a value but never used           no-unused-vars
+   34:10  warning  'avg' is defined but never used                   no-unused-vars
+   43:10  warning  'switchscreen' is defined but never used          no-unused-vars
+   67:9   warning  '$' is not defined                                no-undef
+   68:9   warning  '$' is not defined                                no-undef
+   69:9   warning  '$' is not defined                                no-undef
+   70:9   warning  '$' is not defined                                no-undef
+   71:9   warning  'content' is not defined                          no-undef
+   72:9   warning  '$' is not defined                                no-undef
+   72:28  warning  'content' is not defined                          no-undef
+   73:9   warning  '$' is not defined                                no-undef
+   73:28  warning  'content' is not defined                          no-undef
+  191:10  warning  'comment1' is defined but never used              no-unused-vars
+  202:10  warning  'simstate' is defined but never used              no-unused-vars
+  222:10  warning  'rotstate' is defined but never used              no-unused-vars
+  237:10  warning  'simperiod' is defined but never used             no-unused-vars
+  246:5   warning  'watertemp' is not defined                        no-undef
+  258:35  warning  Unnecessary semicolon                             no-extra-semi
+  259:35  warning  Unnecessary semicolon                             no-extra-semi
+  260:35  warning  Unnecessary semicolon                             no-extra-semi
+  261:35  warning  Unnecessary semicolon                             no-extra-semi
+  262:35  warning  Unnecessary semicolon                             no-extra-semi
+  264:3   warning  '$' is not defined                                no-undef
+  271:7   warning  '$' is not defined                                no-undef
+  272:7   warning  '$' is not defined                                no-undef
+  273:7   warning  '$' is not defined                                no-undef
+  274:7   warning  '$' is not defined                                no-undef
+  280:5   warning  '$' is not defined                                no-undef
+  281:7   warning  '$' is not defined                                no-undef
+  282:7   warning  '$' is not defined                                no-undef
+  283:7   warning  '$' is not defined                                no-undef
+  284:7   warning  '$' is not defined                                no-undef
+  288:10  warning  'openobservation' is defined but never used       no-unused-vars
+  292:10  warning  'closeobservation' is defined but never used      no-unused-vars
+  298:3   warning  '$' is not defined                                no-undef
+  299:5   warning  '$' is not defined                                no-undef
+  300:5   warning  '$' is not defined                                no-undef
+  302:8   warning  '$' is not defined                                no-undef
+  302:42  warning  '$' is not defined                                no-undef
+  303:7   warning  '$' is not defined                                no-undef
+  307:7   warning  '$' is not defined                                no-undef
+  308:11  warning  'content' is already defined                      no-redeclare
+  311:5   warning  '$' is not defined                                no-undef
+  314:3   warning  '$' is not defined                                no-undef
+  315:5   warning  '$' is not defined                                no-undef
+  316:5   warning  '$' is not defined                                no-undef
+  318:8   warning  '$' is not defined                                no-undef
+  318:35  warning  '$' is not defined                                no-undef
+  319:7   warning  '$' is not defined                                no-undef
+  323:7   warning  '$' is not defined                                no-undef
+  324:12  warning  'content' is already defined                      no-redeclare
+  326:5   warning  '$' is not defined                                no-undef
+
+✖ 59 problems (0 errors, 59 warnings)
+  0 errors and 5 warnings potentially fixable with the `--fix` option.
+
