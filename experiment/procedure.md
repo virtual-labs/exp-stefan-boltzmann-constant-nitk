@@ -1,13 +1,26 @@
-1. Clicking on the simulation tab will open the first stage of simulator where water is still in the tank
+### Procedure
 
-![Alt text](images/3.png)
+<div style="text-align:left">
+  Click on the Objective icon <img src="images/objecticon.png" alt="Alt text" style="height:80px; width:80px;">  to view the Objective of the simulation. 
 
-2. Clicking on the play button will start the experiment where the heated water will flow into the enclosure. The temperatures on the thermocouples will start at room temperature and reach to a steady state temperature. 
+   ![Alt text](images/ob.png)
+   
+   Click on the Description icon <img src="images/desicon.png" alt="Alt text" style="height:80px; width:80px;">  to view the description of the simulation. 
 
-![Alt text](images/4.png)
+   ![Alt text](images/ds.png)
 
-3. Clicking on the next button will show a graph which shows the rise in temperature for every five seconds. The user can calculate the heat transfer and Stefan Boltzmann constant to validate the experiment.
+  Click on the Experiment icon <img src="images/expicon.png" alt="Alt text" style="height:80px; width:80px;">  to view the experimental setup. 
 
-![Alt text](images/5.png)
+   ![Alt text](images/exp.png)
 
-Clicking on the reset button in middle will restart the experiment.
+Click on the Start button <img src="images/startButton.png" alt="Alt text" style="height:80px; width:80px;"> to perform the experiment <br>click Reset button <img src="images/resetButton.png" alt="Alt text" style="height:80px; width:80px;"> to reset the experiment. 
+<!-- 
+   ![Alt text](images/expscreen.png) -->
+
+  After performing the experiment, click on the Solve icon <img src="images/solveicon.png" alt="Alt text" style="height:80px; width:80px;"> 
+
+   ![Alt text](images/solve.png)
+
+  Calculate the result and click Check button <img src="images/checkButton.png" alt="Alt text" style="height:80px; width:80px;"> to Evaluate the result.
+
+</div>

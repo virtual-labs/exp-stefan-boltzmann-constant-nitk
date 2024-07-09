@@ -11,10 +11,10 @@
         
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "The right answer is (c). The unit W/m² (Watts per square meter) in heat transfer is used to represent the rate of heat flux. Heat flux, also known as thermal flux, is the rate of heat energy transfer through a given surface.",
+        "b": "The right answer is (c). The unit W/m²K (Watts per square meter Kelvin) in heat transfer is used to represent the heat transfer coefficient. The heat transfer coefficient is a proportionality constant between the heat flux and the thermodynamic driving force for the flow of heat.",
+        "c": "Correct, the right answer is (c). The unit W/m²K⁴ in heat transfer is used to represent the Stefan-Boltzmann constant in the Stefan-Boltzmann Law. The proportionality constant in this law is the Stefan-Boltzmann constant, denoted by the Greek letter sigma (σ), and it has the value of approximately 5.67 x 10^-8 W/m²K⁴.",
+        "d": "The right answer is (c). The unit W/mK (Watts per meter Kelvin) in heat transfer is used to represent thermal conductivity. It is defined as the amount of heat (in watts) transferred through a square meter of material, for each degree of temperature gradient (in Kelvin)."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -28,10 +28,10 @@
         "d": "Stefan-Boltzmann law"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "The right answer is (d). This law states the Grashof number, often denoted as Gr, is a dimensionless number used in heat transfer studies. It approximates the ratio of the buoyancy to viscous forces acting on a fluid.",
+        "b": "The right answer is (d). In heat transfer problems, the Prandtl number controls the relative thickness of the momentum and thermal boundary layers.",
+        "c": "The right answer is (d). This law states the Nusselt number is the ratio of total heat transfer (convection + conduction) to conductive heat transfer across a boundary.",
+        "d": "Correct, the right answer is (d). The rate at which energy is radiated by a black body at an absolute temperature is given by the Stefan-Boltzmann Law. This law states that the total energy radiated per unit surface area of a black body is directly proportional to the fourth power of its absolute temperature."
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
@@ -45,10 +45,10 @@
         "d": "Law of inertia"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "Correct, the right answer is (a). All grey bodies obey the Stefan-Boltzmann's law. This law states that the total energy radiated per unit surface area of a black body is directly proportional to the fourth power of its absolute temperature.",
+        "b": "The right answer is (a). The law states that every physical body spontaneously and continuously emits electromagnetic radiation. The spectral radiance of a body, Bν, describes the spectral emissive power per unit area, per unit solid angle, and per unit frequency for particular radiation frequencies.",
+        "c": "The right answer is (a). The law states that for a body of any arbitrary material emitting and absorbing thermal electromagnetic radiation at every wavelength in thermodynamic equilibrium, the ratio of its emissive power to its dimensionless coefficient of absorption is equal to a universal function only of radiative wavelength and temperature.",
+        "d": "The right answer is (a). The Law of Inertia, also known as Newton's First Law of Motion, states that an object at rest will stay at rest, and an object in motion will stay in motion with the same speed and direction, unless acted upon by a net external force."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -62,10 +62,10 @@
         "d": "Jean’s law"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "The right answer is (b). The law states that the black-body radiation curve for different temperatures will peak at different wavelengths that are inversely proportional to the temperature.",
+        "b": "Correct, the right answer is (b). Newton's Law of Cooling is an approximate form of Stefan's Law. It provides a simplified model for radiative cooling, stating that the rate of temperature change of a body is proportional to the difference in temperatures between the body and its surroundings.",
+        "c": "The right answer is (b). The law states that for a body of any arbitrary material emitting and absorbing thermal electromagnetic radiation at every wavelength in thermodynamic equilibrium, the ratio of its emissive power to its dimensionless coefficient of absorption is equal to a universal function only of radiative wavelength and temperature.",
+        "d": "The right answer is (b). The Rayleigh-Jeans Law is an approximation to the spectral radiance of electromagnetic radiation as a function of wavelength from a black body at a given temperature."
       },
       "correctAnswer": "b",
       "difficulty": "intermediate"
@@ -79,10 +79,10 @@
         "d": "Black body"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "The answer is (d). A black body is an idealized physical body that absorbs all incident electromagnetic radiation, regardless of frequency or angle of incidence. In other words, a black body is a perfect emitter and absorber of heat.",
+        "b": "The answer is (d). A black body is an idealized physical body that absorbs all incident electromagnetic radiation, regardless of frequency or angle of incidence. In other words, a black body is a perfect emitter and absorber of heat.",
+        "c": "The answer is (d). A black body is an idealized physical body that absorbs all incident electromagnetic radiation, regardless of frequency or angle of incidence. In other words, a black body is a perfect emitter and absorber of heat.",
+        "d": "Correct, the right answer is (d). A black body is an idealized physical body that absorbs all incident electromagnetic radiation, regardless of frequency or angle of incidence. In other words, a black body is a perfect emitter and absorber of heat."
       },
       "correctAnswer": "d",
       "difficulty": "intermediate"
