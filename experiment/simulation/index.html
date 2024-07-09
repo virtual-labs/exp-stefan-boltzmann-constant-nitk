@@ -1,240 +1,261 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLVE - heat transfer - Stefan Boltzmann Constant</title>
 
-<head>
-<meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="./css/mathstyle.css" rel="stylesheet" /><!--Stylesheet to display Math functions -->
 
-<title>SOLVE - heat transfer - Stefan Boltzmann Constant</title>
-<link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <!-- <script defer src="https://code.jquery.com/jquery.min.js"></script> -->
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://code.jquery.com/ui/1.8.17/jquery-ui.min.js"
+    ></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"
+    ></script>
+    <!-- <script defer src="./js/graph.ob.js"></script>
+<script defer src="./js/graph_use.ob.js"></script>
+<script defer src="./js/graph_use2.ob.js"></script> -->
 <script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="./js/co.js"></script>
-
-<body onload="drawModel(); startsim(); varinit();" >
-<!-- Defining Container for Simulation -->
-<div id="container" onload="drawModel()" onclick="showCoords(event)">
-    <!-- Replace TITLE with simulation title to be displayed next to logo-->
-    <div id="simtitle">Stefan Boltzman Constant</div>
-    
-    <!-- Region for simulation display -->
-    <canvas id="simscreen" height="400px" width="550px" ></canvas>
- </div>
-
-    <div id="calculation" style="visibility: hidden">
-       <button id="observation" onclick="openobservation()"style="position: relative;left:30px;" >View Table</button>
-      <p><b>Calculations</b></p>
-        <p style="font-size: small;">dT/dt= 0.11K/s</p>
-        <p style="font-size: small;">Q=m.Cp.(dT/dt)</p>
-        <p style="font-size: small;"><label for="slopevalue"><i></i></label><input type="number" id="slopevalue" style="width: 75px;"> W</p>
-        <input type="button" value="Check" onclick="validation()" id="qvalue" ><span id="symbol1" style="position: relative; left: 27px; color: red; visibility: hidden;">&#10008;</span> <span id="symbol2" style="position: relative; left: 10px; color: #028102; visibility: hidden;">&#10004;</span>
-        <div id="answer1" style="font-size: small;"></div>
-      
-        <p style="font-size: small;">σ = <span style="font-size: small;" class="frac"><sup>m.Cp.(dT/dt)</sup><span>&frasl;</span><sub>A(T<sub>avg</sub><sup>4</sup>- T<sub>d</sub><sup>4</sup>)</sub></span></p>
-        <p style="font-size: small;"><label for="kValue"><i> σ = </i></label><input type="number" id="kvalue" style="width: 75px;">x10<sup>-8</sup>W/m<sup>2</sup>k<sup>4</sup></p>
-        <p style="font-size: small;"></p>
-        <input type="button" value="Check" onclick="validation()" id="ksubmit" ><span id="symbol3" style="position: relative; left: 27px; color: red;visibility: hidden;">&#10008;</span> <span id="symbol4" style="position: relative; left: 25px; color: #028102;visibility: hidden;">&#10004;</span>
-        <div id="answer2" style="font-size: small;"></div>
-
-        <div class="observation" id="IBobservation">
-          <div class="tablediv" id="IBtablediv">
-              <table class="observationTable" id="IBobservationTable">
-                  <tr>
-                      <th>Time(in seconds)</th>
-                      <th>Temperture(in &degC)</th>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>34.9</td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>35.2</td>
-                  </tr>
-                  <tr>
-                    <td>15</td>
-                    <td>35.7</td>
-                  </tr>
-                  <tr>
-                    <td>20</td>
-                    <td>35.9</td>
-                  </tr>
-                  <tr>
-                    <td>25</td>
-                    <td>36</td>
-                  </tr>
-                  <tr>
-                    <td>30</td>
-                    <td>36.8</td>
-                  </tr>
-                  <tr>
-                    <td>35</td>
-                    <td>38.1</td>
-                  </tr>
-                  <tr>
-                    <td>40</td>
-                    <td>38.8</td>
-                  </tr>
-                  <tr>
-                    <td>45</td>
-                    <td>39.3</td>
-                  </tr>
-                  <tr>
-                    <td>50</td>
-                    <td>39.7</td>
-                  </tr>
-                  <tr>
-                    <td>55</td>
-                    <td>40.2</td>
-                  </tr>
-              </table>
-          </div>
-          <div class="tableObservation" id="IBtableObservation">
-              <button type="button" onclick="closeobservation()">Close</button>
-          </div>
-      </div>
-      <div style="position: absolute; top: 2px; left: 245px; width: 300px; height: 30px; font-size:medium; text-align: center;"><b>Temperature Gradient</b></div>
-      <div id="graph" style="position: absolute;left:245px; top: 40px; width:300px; height:300px;" >
-        <script>
-          // Define data
-           var xValues = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55];
-          var yValues = [34.9, 35.2, 35.7, 35.9, 36, 36.8, 38.1, 38.8, 39.3, 39.7, 40.2];
-
-
-           // Define Data
-          var data = [{
-          x:xValues,
-          y:yValues,
-          type: 'scatter'
-          }];
-
-           // Define Layout
-          var layout = {
-          margin: { t: 0, l: 35, r: 0, b: 30 },
-          autosize: true,
-
-           xaxis: {
-              title: "Time(s)",
-              range: [0,56],
-              fixedrange: true,
-            },
-           yaxis: {
-              title: "Temp(&deg;C)",
-              range: [33,42],
-              fixedrange: true,
-            },
-
-};
-
-// Display using Plotly
-Plotly.newPlot("graph", data, layout, { displayModeBar: false });
-        </script>
+  </head>
+  <body>
+    <div class="title-div-container">
+      <div class="title-div">
+        <div class="logo-div">
+          <a href="#"
+            ><img src="images/logo_nitk.png" alt="Logo" class="logo"
+          /></a>
+        </div>
+        <h1>Stefan Boltzman Constant</h1>
       </div>
     </div>
+    <div class="container">
+      <div class="sidebar">
+        <ul class="tool-menu">
+          <li class="tool-list tool-objective" onclick="displayDiv(this)">
+            <a class="tool-link" title="Objective">
+              <img src="./images/objective.png" alt="Objective" class="icons" />
+            </a>
+            <span>Objective</span>
+          </li>
+          <li class="tool-list tool-description" onclick="displayDiv(this)">
+            <a class="tool-link" title="Description"
+              ><img
+                src="./images/description.png"
+                alt="Description"
+                class="icons"
+            /></a>
+            <span>Description</span>
+          </li>
 
-    <div id="titleincanvas">
-    </div>
-    
-    <!-- Region for comment / question prompts style="visibility: hidden";-->
-    <div id="commentboxleft">
-            <li>Diameter of test disc(d) = 20mm</li>
-            <li>Mass of test disc(m) = 0.5g </li>
-            <li>Specific heat of copper = 380.3kJ/kgk </li>
+          <li class="tool-list tool-explore" onclick="displayDiv(this)">
+            <a class="tool-link" title="Explore"
+              ><img src="./images/explore.png" alt="Explore" class="icons"
+            /></a>
+            <span>Experiment</span>
+          </li>
+          <li class="tool-list tool-practice" onclick="displayDiv(this)">
+            <a class="tool-link" title="Variables"
+              ><img src="./images/solution.png" alt="solution" class="icons"
+            /></a>
+            <span>Solve</span>
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="main-section">
+          <div id="simulation" class="main__task-div">
+            <h3 class="task-title">Simulation</h3>
 
-    </div>
-    <div id="commentboxright">
-        <li>Thickness of disc = 15mm</li>
-        <li>Emissivity of Hemisphere =  0.072</li>
-        <li>Emissivity of copper disc = 0.072</li>
-        <li>Inner Diameter of Hemisphere Surface = 200mm </li>
-    </div>
-    
-    <!-- DND-Title of region for variables display --> 
-    <div id="vartitle">VARIABLES</div>
-    
-    <!-- Region for Input parameters of simulation -->
-    <div id="variables">
-    
-    <!-- System variable input from user through slider and spinner jQuery widgets 
-    repeat block with new variable name and new id for widgets-->
+            <div class="canvas__div">
+              <div class="task-screen objective">
+                <h3 class="objective__title">Objective</h3>
+                <p class="objective__main">
+                  To determine the Stefan Boltzman constant for radiation heat transfer.
+                </p>
+              </div>
+              <div class="task-screen description hide">
+                <h3 class="description__title">Description</h3>
+                <div class="description-conatiner">
+                  <img src="./images/descrpitionModel.png" alt="apparatus" class="model" />
+                  <div class="model-detail">
+                    <p>Diameter of test disc(d) = 20mm</p>
+                    <p>Thickness of disc = 15mm</p>
+                    <p>Mass of test disc(m) = 0.5g</p>
+                    <p>Emissivity of Hemisphere =  0.072</p>
+                    <p>Specific heat of copper = 380.3kJ/kgk</p>
+                    <p>Emissivity of copper disc = 0.072</p>
+                    <P></P>
+                    <P>Inner Diameter of Hemisphere Surface = 200mm</P>
+                  </div>
+                </div>
+              </div>
+              <div class="task-screen explore hide">
+                <div class="explore-controls">
+                
+                  <div class="temperature-set">
+                    <!-- <div class="temperature-group">
+                      <span class="temp-text">Vf(cc/min)</span>
+                      <span class="temp-val" id="vfspinner">10</span>
+                    </div> -->
+                    <div class="temperature-group">
+                      <span class="temp-text">Temp1(&deg;C)</span>
+                      <span class="temp-val" id="temp1">10</span>
+                    </div>
+                    <div class="temperature-group">
+                      <span class="temp-text">Temp2(&deg;C)</span>
+                      <span class="temp-val" id="temp2">10</span>
+                    </div>
+                    <div class="temperature-group">
+                      <span class="temp-text">Temp3(&deg;C)</span>
+                      <span class="temp-val" id="temp3">10</span>
+                    </div>
+                    <div class="temperature-group">
+                      <span class="temp-text">Temp4(&deg;C)</span>
+                      <span class="temp-val" id="temp4">10</span>
+                    </div>
+                    <div class="temperature-group">
+                      <span class="temp-text">T avg(&deg;C)</span>
+                      <span class="temp-val" id="temp5">10 </span>
+                    </div>
+                  <div class="button-group">
+                    <span class="temp-text"><div></div></span>
+                     <button class="btn btn-start " onclick="simstate()">Start</button>
+                    <button class="btn btn-reset ">Reset</button>
+                  </div>
+                   
+                  </div>
+                </div>
+                <p class="comment"></p>
 
-    <div class="variable1">
-        <div class="varname"><p title="Link Length">Temp1(&deg;C)</p>
-            <input id="temp1" style="width: 40px;border:none;" readonly></input></div>
-        
-    </div>
-    
-    <div class="variable2">
-        <div class="varname"><p title="Link Length">Temp2(&deg;C)</p>
-            <input id="temp2"style="width: 40px;border:none;" readonly></input></div>
-        
-    </div>
-    
-    <div class="variable3">
-        <div class="varname"><p title="Link Length">Temp3(&deg;C)</p>
-            <input id="temp3"style="width: 40px;border:none;" readonly></input></div>
-        
-    </div>
-    
-    <div class="variable4">
-        <div class="varname"><p title="Link Length">Temp4(&deg;C)</p>
-            <input id="temp4" style="width: 40px;border:none;" readonly></input></div>
-        
-    </div><br>
-    <button onclick="avg()"style="position: relative;left: 50px;  font-family: Comic sans MS, sans-serif;
-">Average</button><br><br>
-    <label id="Average" style="position: relative;left: 10px;  font-family: Comic sans MS, sans-serif;
-">T<sub>avg</sub>=</label>
-    <span id="avg" style="position: relative;left: 15px;"></span>
+                <canvas
+                  id="simscreen"
+                  width="500"
+                  height="450"
+                  class="canvas"
+                ></canvas>
+                </div>
+                <div class="task-screen practice hide">
+                  
+                  <p id="info">Temperature Gradient</p>
+                  <p class="extra-info hide">Move the cursor to the graph to see the points</p>
+                  <div class="graph-table">
+                  <div class="graph-div">
+                    <div class="graph" id="graph"></div>
+                  </div>
+                  <div>
+                    <table>
+                      <tr>
+                          <th class="time">Time</th>
+                          <th class="temperature">Temperature</th>
+                      </tr>
+                      <tr>
+                          <td>5</td>
+                          <td>34.9</td>
+                      </tr>
+                      <tr>
+                          <td>10</td>
+                          <td>35.2</td>
+                      </tr>
+                      <tr>
+                          <td>15</td>
+                          <td>35.7</td>
+                      </tr>
+                      <tr>
+                          <td>20</td>
+                          <td>35.9</td>
+                      </tr>
+                      <tr>
+                          <td>25</td>
+                          <td>36</td>
+                      </tr>
+                      <tr>
+                          <td>30</td>
+                          <td>36.8</td>
+                      </tr>
+                      <tr>
+                          <td>35</td>
+                          <td>38.1</td>
+                      </tr>
+                      <tr>
+                          <td>40</td>
+                          <td>38.8</td>
+                      </tr>
+                      <tr>
+                          <td>45</td>
+                          <td>39.3</td>
+                      </tr>
+                      <tr>
+                          <td>50</td>
+                          <td>39.7</td>
+                      </tr>
+                      <tr>
+                          <td>55</td>
+                          <td>40.2</td>
+                      </tr>
+                      
+                  </table>
+                  </div>
+                </div>
+                  <div class="questions">
+                    <p class="warning"> Please enter a value rounded upto two decimal points</p>
+                    <div class="question-one">
+                      <div class="question-title">Calculation</div>
+                      <div class="question-formula">dT/dt= 0.11K/s <br> Q=m.Cp.(dT/dt)</div>
 
-    <script>
-        document.getElementById("temp1").addEventListener("keypress",function(event) 
-        {
-          if (event.key === "Enter") {
-            event.preventDefault();
-            document.getElementById("temp2").focus();
-          }
-        });
-        document.getElementById("temp2").addEventListener("keypress",function(event) 
-        {
-          if (event.key === "Enter") {
-            event.preventDefault();
-            document.getElementById("temp3").focus();
-          }
-        });
-        document.getElementById("temp3").addEventListener("keypress",function(event) 
-        {
-          if (event.key === "Enter") {
-            event.preventDefault();
-            document.getElementById("temp4").focus();
-          }
-        });
-        document.getElementById("4").addEventListener("keypress",function(event) 
-        {
-          if (event.key === "Enter") {
-            event.preventDefault();
-            avg();
-          }
-        });
-    </script>
-    
-    
+                      <p class="question-label">Q</p>
+                      <input class="question-input question-input1" type="number"/>
+                      <p class="question-unit question-unit1">W</p>
+                      <p class="correct-answer correct-answer1 hide"></p>
+                      <button class="btn btn-check btn-check1">Check</button>
+                    </div>
+                    <div class="question-two">
+                      <div class="question-title">Calculation</div>
+                      <div class="question-formula">σ = <span style="font-size: small;" class="frac"><sup>m.Cp.(dT/dt)</sup><span>&frasl;</span><sub>A(T<sub>avg</sub><sup>4</sup>- T<sub>d</sub><sup>4</sup>)</sub></div>
+                      <p class="question-label"> σ = </p>
+                      <input class="question-input question-input2" type="number"/>
+                      <p class="question-unit question-unit2">x10<sup>-8</sup>W/m<sup>2</sup>k<sup>4</sup></p>
+                      <p class="correct-answer correct-answer2 hide"></p>
+                      <button class="btn btn-check btn-check2">Check</button>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main__task-div footer">
+            <p>Copyright © SOLVE The Virtual Lab @ NITK Surathkal</p>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <!-- DND-Title of region for controls display -->
-    <div id="ctrltitle">CONTROLS</div>
-    
-    <!-- Region for User controls of simulation -->
-    <div id="controls">
-        <img id="playpausebutton" onclick="simstate()" src="./images/blueplaydull.png" />
-        <img id="rotationbutton" onclick="rotstate()" src="./images//restartdull.png" />
-        <img id="switchbutton" onclick="switchscreen()" src="./images//bluefwddulls.png" />
-
-    </div>
-    
-    
-    <!-- DND-Copyright display-->
-    <div id="copyright"> Copyright &copy; SOLVE The Virtual Lab @ NITK Surathkal </div>
-    
-    </div><!-- Container div close -->
-    </body>
-    </html>
+    <script defer src="js/script.js"></script>
+  </body>
+</html>
