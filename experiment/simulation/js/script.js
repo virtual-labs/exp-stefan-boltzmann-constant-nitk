@@ -11,6 +11,8 @@ const temperature4 = document.querySelector("#temp4");
 const temperature5 = document.querySelector("#temp5");
 const btnCheck1 = document.querySelector(".btn-check1");
 const btnCheck2 = document.querySelector(".btn-check2");
+const taskTitle = document.querySelector(".task-title");
+
 
 btnStart.addEventListener("click", initiateProcess);
 btnReset.addEventListener("click", resetAll);
@@ -49,14 +51,20 @@ function displayDiv(ele) {
   });
   if (ele.classList.contains("tool-objective")) {
     document.querySelector(".objective").classList.remove("hide");
+    taskTitle.textContent = "Objective";
   }
   if (ele.classList.contains("tool-description")) {
     document.querySelector(".description").classList.remove("hide");
+    taskTitle.textContent = "Description";
+
   }
   if (ele.classList.contains("tool-explore")) {
     document.querySelector(".explore").classList.remove("hide");
     document.querySelector(".extra-info").classList.add("hide");
     document.querySelector(".graph-table").classList.add("hide");
+    taskTitle.textContent = "Experiment";
+
+
     if (temp2 !== 1) {
       drawModel();
       startsim();
@@ -67,6 +75,8 @@ function displayDiv(ele) {
     document.querySelector(".practice").classList.remove("hide");
     document.querySelector(".extra-info").classList.remove("hide");
     document.querySelector(".graph-table").classList.remove("hide");
+    taskTitle.textContent = "Solve";
+
     if (temp2 == 1) {
       temp1 = 1;
       validation();
@@ -343,7 +353,8 @@ function startsim() {
   simTimeId = setInterval("time=time+0.1; comment1(); ", "100");
 }
 function initiateProcess() {
-  
+  btnStart.setAttribute("disabled", true);
+  btnReset.setAttribute("disabled", true);
   simstate();
 }
 
@@ -444,8 +455,8 @@ function validateAnswer2() {
   }
 }
 function resetAll() {
-  // btnStart.setAttribute("disabled", true);
- 
+  btnStart.removeAttribute("disabled");
+  btnReset.setAttribute("disabled", true);
   document.querySelector(".comment").innerHTML = "";
   // if (temp1 == 0) {
     temp2 = 0; 
