@@ -1,7 +1,7 @@
 ### Procedure
 
 <!-- <div style="text-align:left"> -->
-1. Click on the Objective icon <img src="images/objecticon.png" alt="Alt text" >  to view the Objective of the simulation.
+1. Click on the Objective icon <img src="images/objecticon.png" alt="Alt text" >  to view the objective of the simulation.
 
    ![Alt text](images/ob.png)
 
