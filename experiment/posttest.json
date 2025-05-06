@@ -19,7 +19,7 @@
       "difficulty": "advanced"
     },
     {
-      "question": "The heat transfer equation Q = σAT4 is called",
+      "question": "The heat transfer equation Q = σAT<sup>4</sup> is called",
       "answers": {
         "a": "Newton’s law",
         "b": "Stefan-Boltzmann law",
@@ -27,10 +27,10 @@
         "d": "Fourier law"
       },
       "explanations": {
-        "a": "The right answer is (b). The heat transfer equation Q = σAT4 is called Stefan-Boltzmann law. Newton's law specifies the behavior of object in motion or at rest.",
-        "b": "Correct, the right answer is (b). The heat transfer equation Q = σAT4 is called Stefan-Boltzmann law. This law states that the total energy radiated per unit surface area of a black body is directly proportional to the fourth power of its absolute temperature.",
-        "c": "The right answer is (b). The heat transfer equation Q = σAT4 is called Stefan-Boltzmann law. In the context of heat transfer, Poisson' law defines Poisson's equation is a partial differential equation that describes the distribution of heat (or variations in temperature) in a given region over time",
-        "d": "The right answer is (b). The heat transfer equation Q = σAT4 is called Stefan-Boltzmann law. Fourier’s Law, also known as the Law of Heat Conduction, states that the rate of heat transfer through a material is proportional to the negative gradient in the temperature and the area (perpendicular to the gradient) through which the heat flows."
+        "a": "The right answer is (b). The heat transfer equation Q = σAT<sup>4</sup> is called Stefan-Boltzmann law. Newton's law specifies the behavior of object in motion or at rest.",
+        "b": "Correct, the right answer is (b). The heat transfer equation Q = σAT<sup>4</sup> is called Stefan-Boltzmann law. This law states that the total energy radiated per unit surface area of a black body is directly proportional to the fourth power of its absolute temperature.",
+        "c": "The right answer is (b). The heat transfer equation Q = σAT<sup>4</sup> is called Stefan-Boltzmann law. In the context of heat transfer, Poisson' law defines Poisson's equation is a partial differential equation that describes the distribution of heat (or variations in temperature) in a given region over time",
+        "d": "The right answer is (b). The heat transfer equation Q = σAT<sup>4</sup> is called Stefan-Boltzmann law. Fourier’s Law, also known as the Law of Heat Conduction, states that the rate of heat transfer through a material is proportional to the negative gradient in the temperature and the area (perpendicular to the gradient) through which the heat flows."
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -70,7 +70,7 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "A furnace having inside temperature of 2250 has a glass circular viewing of 6 cm diameter. If the transmissivity of glass is 0.08, make calculations for the heat loss from the glass window due to radiation",
+      "question": "A furnace having inside temperature of 2250K has a glass circular viewing of 6cm diameter. If the transmissivity of glass is 0.08, make calculations for the heat loss from the glass window due to radiation",
       "answers": {
         "a": "234.54 W",
         "b": "652.32 W",
