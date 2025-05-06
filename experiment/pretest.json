@@ -7,8 +7,7 @@
         "a": "W/m^2",
         "b": "W/m^2k",
         "c": "W/m^2k^4",
-        "d":"W/mk"
-        
+        "d": "W/mk"
       },
       "explanations": {
         "a": "The right answer is (c). The unit W/m² (Watts per square meter) in heat transfer is used to represent the rate of heat flux. Heat flux, also known as thermal flux, is the rate of heat energy transfer through a given surface.",
@@ -20,7 +19,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "The rate at which is energy is radiated by a black body at an absolute temperature is given by",
+      "question": "The rate at which the energy is radiated by a black body at an absolute temperature is given by",
       "answers": {
         "a": "Grashof law",
         "b": "Prandtl law ",

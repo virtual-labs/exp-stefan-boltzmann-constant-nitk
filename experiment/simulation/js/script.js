@@ -13,7 +13,6 @@ const btnCheck1 = document.querySelector(".btn-check1");
 const btnCheck2 = document.querySelector(".btn-check2");
 const taskTitle = document.querySelector(".task-title");
 
-
 btnStart.addEventListener("click", initiateProcess);
 btnReset.addEventListener("click", resetAll);
 voltageButtons.forEach((voltage) =>
@@ -35,14 +34,15 @@ let time1 = 0;
 let time2 = 0;
 
 //point tracing section and initial(atmospheric section)
-var t1 = [27.5, 26.5, 27, 26.5];
-var th = [45,45,45,45,45];
-var off = [10.2,11,15,23.3];
+// var t1 = [27.5, 26.5, 27, 26.5];
+var t1 = [26, 26, 26, 26, 26, 26, 26];
+var th = [45, 45, 45, 45, 45];
+var off = [10.2, 11, 15, 23.3];
 
 //temporary or dummy variables for locking buttons
-var temp= 0;
+var temp = 0;
 var temp1 = 2;
-var temp2 = 0;  
+var temp2 = 0;
 
 function displayDiv(ele) {
   const taskScreen = document.querySelectorAll(".task-screen");
@@ -56,14 +56,12 @@ function displayDiv(ele) {
   if (ele.classList.contains("tool-description")) {
     document.querySelector(".description").classList.remove("hide");
     taskTitle.textContent = "Description";
-
   }
   if (ele.classList.contains("tool-explore")) {
     document.querySelector(".explore").classList.remove("hide");
     document.querySelector(".extra-info").classList.add("hide");
     document.querySelector(".graph-table").classList.add("hide");
     taskTitle.textContent = "Experiment";
-
 
     if (temp2 !== 1) {
       drawModel();
@@ -86,51 +84,49 @@ function displayDiv(ele) {
         "Perform the experiment to solve the questions";
       document.querySelector(".graph-div").classList.add("hide");
       document.querySelector(".questions").classList.add("hide");
-    document.querySelector(".extra-info").classList.add("hide");
-    document.querySelector(".graph-table").classList.add("hide");
-
+      document.querySelector(".extra-info").classList.add("hide");
+      document.querySelector(".graph-table").classList.add("hide");
     }
   }
 }
 //Change in Variables with respect to time
 function varinit() {
-
-  if(time2 > 0){ t1[0] += off[0];};
-  if(time2 > 1){ t1[1] += off[1];};
-  if(time2 > 2){ t1[2] += off[2];};
-  if(time2 > 3){ t1[3] += off[3];};
-  if(time2 > 4){ t1[4] += off[4];};
+  if (time2 > 0) {
+    t1[0] += off[0];
+  }
+  if (time2 > 1) {
+    t1[1] += off[1];
+  }
+  if (time2 > 2) {
+    t1[2] += off[2];
+  }
+  if (time2 > 3) {
+    t1[3] += off[3];
+  }
+  if (time2 > 4) {
+    t1[4] += off[4];
+  }
 
   // vfspinner.textContent = vf;
 
-;
-
-
-  $(document).ready(function() {
-  
-    if(t1[0]>90 ||t1[1]>90||t1[2]>90||t1[3]>90)
-    {
-      t1=[45,40,30,10];
+  $(document).ready(function () {
+    if (t1[0] > 90 || t1[1] > 90 || t1[2] > 90 || t1[3] > 90) {
+      t1 = [45, 40, 30, 10];
       return;
-    }
-    else{
+    } else {
       // t11=temperature1.value;
       // t22=temperature2.value;
       // t33=temperature3.value;
       // t44=temperature4.value;
-      var average = (t1[0] + t1[1] +t1[2] +t1[3])/4;
-   
+      var average = (t1[0] + t1[1] + t1[2] + t1[3]) / 4;
+
       temperature1.textContent = t1[0].toFixed(2);
       temperature2.textContent = t1[1].toFixed(2);
       temperature3.textContent = t1[2].toFixed(2);
       temperature4.textContent = t1[3].toFixed(2);
       temperature5.innerHTML = average.toFixed(2);
-  
     }
   });
- 
-  
-
 }
 
 //water temperature changes
@@ -165,27 +161,25 @@ function simperiod() {
     //ctx.fillText(t1[5]+" \u00B0C", 470, 170);
     // ctx.fillText(t1[6] + " \u00B0C", 650, 500);
     // printcomment("", 2);
-
   } else {
     drawGradient();
     steadyState = 5 - Math.round(time1);
     document.querySelector(
       ".comment"
     ).innerHTML = `Wait for  ${steadyState} seconds for steady state`;
-   btnReset.setAttribute("disabled", true);
+    btnReset.setAttribute("disabled", true);
     if (steadyState === 0) {
       temp2 = 0;
       document.querySelector(
         ".comment"
       ).innerHTML = `The steady state is achieved
 `;
- btnReset.removeAttribute("disabled");
+      btnReset.removeAttribute("disabled");
     }
     printcomment(
       "Wait for " + (5 - Math.round(time1)) + " seconds for steady state",
       2
     );
-    
   }
 }
 //draw gradient w.r.t. time in thermometer water flow and heater
@@ -194,51 +188,50 @@ function drawGradient() {
   ctx.fillRect(130, 65, 73, 97);
 
   //heater simulation
-  var h = 80*time1;
+  var h = 80 * time1;
   //create gradient
-  var grd1 = ctx.createLinearGradient(0, 0,0 ,h)
-  grd1.addColorStop(0,"white");
-  grd1.addColorStop(1,"skyblue");
+  var grd1 = ctx.createLinearGradient(0, 0, 0, h);
+  grd1.addColorStop(0, "white");
+  grd1.addColorStop(1, "skyblue");
   // Fill with gradient
   ctx.fillStyle = grd1;
   ctx.fillRect(130, 65, 73, 97);
 
-
   //water simulation
-  var w = 150*time1;
+  var w = 150 * time1;
   //create gradient
-  var grd2 = ctx.createLinearGradient(0, 0, 0,w )
-  grd2.addColorStop(1,"white");
-  grd2.addColorStop(0,"#00bbff");
+  var grd2 = ctx.createLinearGradient(0, 0, 0, w);
+  grd2.addColorStop(1, "white");
+  grd2.addColorStop(0, "#00bbff");
   // Fill with gradient
   ctx.fillStyle = grd2;
   ctx.fillRect(191, 233, 175, 85);
   ctx.beginPath();
-  ctx.arc(228, 280, 5, 0, 2*Math.PI);
+  ctx.arc(228, 280, 5, 0, 2 * Math.PI);
   ctx.fillStyle = "red";
   ctx.fill();
   ctx.closePath();
 
   ctx.beginPath();
-  ctx.arc(260, 255, 5, 0, 2*Math.PI);
+  ctx.arc(260, 255, 5, 0, 2 * Math.PI);
   ctx.fillStyle = "red";
   ctx.fill();
   ctx.closePath();
 
   ctx.beginPath();
-  ctx.arc(300, 255, 5, 0, 2*Math.PI);
+  ctx.arc(300, 255, 5, 0, 2 * Math.PI);
   ctx.fillStyle = "red";
   ctx.fill();
   ctx.closePath();
 
   ctx.beginPath();
-  ctx.arc(335, 280, 5, 0, 2*Math.PI);
+  ctx.arc(335, 280, 5, 0, 2 * Math.PI);
   ctx.fillStyle = "red";
   ctx.fill();
   ctx.closePath();
 
   ctx.beginPath();
-  ctx.arc(283, 318, 65, 0, Math.PI,true);
+  ctx.arc(283, 318, 65, 0, Math.PI, true);
   ctx.fillStyle = "white";
   ctx.fill();
   ctx.closePath();
@@ -258,62 +251,61 @@ function drawModel() {
   background.src = "./images//model22.png";
 
   // Make sure the image is loaded first otherwise nothing will draw.
-  background.onload = function(){
-    ctx.drawImage(background, 0, 0, 550, 400); 
+  background.onload = function () {
+    ctx.drawImage(background, 0, 0, 550, 400);
     drawGradient();
 
     ctx.beginPath();
-    ctx.arc(228, 280, 5, 0, 2*Math.PI);
+    ctx.arc(228, 280, 5, 0, 2 * Math.PI);
     ctx.fillStyle = "red";
     ctx.fill();
     ctx.closePath();
 
     ctx.beginPath();
-    ctx.arc(260, 255, 5, 0, 2*Math.PI);
+    ctx.arc(260, 255, 5, 0, 2 * Math.PI);
     ctx.fillStyle = "red";
     ctx.fill();
     ctx.closePath();
 
     ctx.beginPath();
-    ctx.arc(300, 255, 5, 0, 2*Math.PI);
+    ctx.arc(300, 255, 5, 0, 2 * Math.PI);
     ctx.fillStyle = "red";
     ctx.fill();
     ctx.closePath();
 
     ctx.beginPath();
-    ctx.arc(335, 280, 5, 0, 2*Math.PI);
+    ctx.arc(335, 280, 5, 0, 2 * Math.PI);
     ctx.fillStyle = "red";
     ctx.fill();
     ctx.closePath();
 
     ctx.beginPath();
-    ctx.arc(395, 50,4, 0, 2*Math.PI);
+    ctx.arc(395, 50, 4, 0, 2 * Math.PI);
     ctx.fillStyle = "red";
     ctx.fill();
     ctx.closePath();
-    ctx.fillText("Thermocouples",400,55);
-
-  }
+    ctx.fillText("Thermocouples", 400, 55);
+  };
 }
 
 function comment1() {
   // if (currentVoltage != 0) {
-    time = 0;
-    temp = 1;
-    // $("#vspinner").spinner({disabled : true});
-    // //$("#vfspinner").spinner({disabled : true});
-    // $("#vslider").slider({disabled : true});
-    // $("#vfslider").slider({disabled : true});
-    clearInterval(simTimeId);
-    //printcomment("start simulation", 0);
-    // if (currentVoltage == 10) {
-    //   vf = 26;
-    // } else if (currentVoltage == 20) {
-    //   vf = 54;
-    // } else if (currentVoltage == 30) {
-    //   vf = 60;
-    // }
-    // offset();
+  time = 0;
+  temp = 1;
+  // $("#vspinner").spinner({disabled : true});
+  // //$("#vfspinner").spinner({disabled : true});
+  // $("#vslider").slider({disabled : true});
+  // $("#vfslider").slider({disabled : true});
+  clearInterval(simTimeId);
+  //printcomment("start simulation", 0);
+  // if (currentVoltage == 10) {
+  //   vf = 26;
+  // } else if (currentVoltage == 20) {
+  //   vf = 54;
+  // } else if (currentVoltage == 30) {
+  //   vf = 60;
+  // }
+  // offset();
   // }
 }
 
@@ -370,38 +362,40 @@ function simstate() {
 //Calculations of the experienment
 function validation() {
   var xValues = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55];
-  var yValues = [34.9, 35.2, 35.7, 35.9, 36, 36.8, 38.1, 38.8, 39.3, 39.7, 40.2];
+  var yValues = [
+    34.9, 35.2, 35.7, 35.9, 36, 36.8, 38.1, 38.8, 39.3, 39.7, 40.2,
+  ];
 
+  // Define Data
+  var data = [
+    {
+      x: xValues,
+      y: yValues,
+      type: "scatter",
+    },
+  ];
 
-   // Define Data
-  var data = [{
-  x:xValues,
-  y:yValues,
-  type: 'scatter'
-  }];
-
-   // Define Layout
+  // Define Layout
   var layout = {
-  margin: { t: 0, l: 35, r: 0, b: 30 },
-  autosize: true,
+    margin: { t: 0, l: 35, r: 0, b: 30 },
+    autosize: true,
 
-   xaxis: {
+    xaxis: {
       title: "Time(s)",
-      range: [0,56],
+      range: [0, 56],
       fixedrange: true,
     },
-   yaxis: {
+    yaxis: {
       title: "Temp(&deg;C)",
-      range: [33,42],
+      range: [33, 42],
       fixedrange: true,
     },
+  };
 
-};
-
-// Display using Plotly
+  // Display using Plotly
   document.querySelector(".graph-div").classList.remove("hide");
   document.querySelector(".questions").classList.remove("hide");
-Plotly.newPlot("graph", data, layout, { displayModeBar: false });
+  Plotly.newPlot("graph", data, layout, { displayModeBar: false });
 
   // drawgraph("graph", datapoints, "Length in meter", "Temperature in degree C");
   // if (currentVoltage == 10) {
@@ -425,7 +419,8 @@ function validateAnswer1() {
   let userEnteredValue = Number(
     document.querySelector(".question-input1").value
   );
-  let answer = userEnteredValue <=0.022 && userEnteredValue >= 0.0206 ? true : false;
+  let answer =
+    userEnteredValue <= 0.022 && userEnteredValue >= 0.0206 ? true : false;
   if (!userEnteredValue) return;
   if (!answer) {
     correctAnswer.classList.remove("hide");
@@ -443,7 +438,8 @@ function validateAnswer2() {
   let userEnteredValue = Number(
     document.querySelector(".question-input2").value
   );
-  let answer = userEnteredValue <= 1.2 && userEnteredValue >=1.18 ? true : false;
+  let answer =
+    userEnteredValue <= 1.0137 && userEnteredValue >= 1.0111 ? true : false;
   if (!userEnteredValue) return;
   if (!answer) {
     correctAnswer.classList.remove("hide");
@@ -454,22 +450,37 @@ function validateAnswer2() {
     unit.innerHTML += " <span class='correct'>&#x2713;</span>";
   }
 }
+
+function validateNearToAnswer(exactAnswer, userAnswer) {
+  const tolerance = 0.01; // Define the tolerance level
+  const lowerBound = exactAnswer - tolerance;
+  const upperBound = exactAnswer + tolerance;
+
+  if (userAnswer < lowerBound || userAnswer > upperBound) {
+    return false; // Answer is outside the tolerance range
+  } else {
+    return true; // Answer is within the tolerance range
+  }
+}
 function resetAll() {
   btnStart.removeAttribute("disabled");
   btnReset.setAttribute("disabled", true);
   document.querySelector(".comment").innerHTML = "";
   // if (temp1 == 0) {
-    temp2 = 0; 
-    temp1 = 2;
-    t1 = [27.5, 27, 27, 26.5, 27.5, 27, 26.8];
-    th = [45,45,45,45,45];
+  temp2 = 0;
+  temp1 = 2;
+  // t1 = [27.5, 27, 27, 26.5, 27.5, 27, 26.8];
+  t1 = [26, 26, 26, 26, 26, 26, 26];
+  th = [45, 45, 45, 45, 45];
   // currentVoltage = 0;
   // vf = 0;
   document.querySelector(".correct-answer1").innerHTML = "";
   document.querySelector(".question-unit1").innerHTML = `W`;
   document.querySelector(".question-input1").value = "";
   document.querySelector(".correct-answer2").innerHTML = "";
-  document.querySelector(".question-unit2").innerHTML = `x10<sup>-8</sup>W/m<sup>2</sup>k<sup>4</sup>`;
+  document.querySelector(
+    ".question-unit2"
+  ).innerHTML = `x10<sup>-8</sup>W/m<sup>2</sup>k<sup>4</sup>`;
   document.querySelector(".question-input2").value = "";
   varinit();
   startsim();
