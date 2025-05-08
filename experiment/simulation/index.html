@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" href="css/query.css" />
     <!-- <script defer src="https://code.jquery.com/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     <script
       defer
       src="https://code.jquery.com/jquery-3.7.0.min.js"
@@ -227,21 +228,23 @@
                     <!-- <p class="warning"> Please enter a value rounded upto two decimal points</p> -->
                     <div class="question-one">
                       <div class="question-title">Calculation</div>
-                      <div class="question-formula">dT/dt= 0.11K/s <br> Q=m.Cp.(dT/dt)</div>
+                      <div class="question-formula">
+                        <p>$$\frac{d_T}{d_t}= 0.11K/s$$ </p>
+                        <p> $$Q=m.C_p.(\frac{d_T}{d_t})$$</p></div>
 
-                      <p class="question-label">Q =</p>
+                      <p class="question-label">$$Q =$$</p>
                       <input class="question-input question-input1" type="number"/>
-                      <p class="question-unit question-unit1">W</p>
+                      <p class="question-unit question-unit1">$$W$$</p>
                       <p class="correct-answer correct-answer1 hide"></p>
                       <button class="btn btn-check btn-check1">Check</button>
                     </div>
                     <div class="question-two">
                       <div class="question-title">Calculation</div>
-                      <div class="question-formula">σ = |<span style="font-size: small;" class="frac"><sup>m.Cp.(dT/dt)</sup><span>&frasl;</span><sub>A(T<sub>avg</sub><sup>4</sup>- T<sub>d</sub><sup>4</sup>)</sub></span>|</div>
-                      <p style="display: block;">Td = Disc Temperature = 40.2&deg;C</p>
-                      <p class="question-label"> σ = </p>
+                      <div class="question-formula">$$σ = |{\frac{m.C_p.(\frac{d_T}{d_t})}{A(T_{avg}^4 - T_d^4)}}|$$</div>
+                      <p style="grid-column: 1/-1;justify-self: center;">$$Td = Disc \space Temperature = 40.2°C$$</p>
+                      <p class="question-label"> $$σ = $$</p>
                       <input class="question-input question-input2" type="number"/>
-                      <p class="question-unit question-unit2">x10<sup>-8</sup>W/m<sup>2</sup>k<sup>4</sup></p>
+                      <p class="question-unit question-unit2">$$\times 10^{-8}W/m^2k^4$$</p>
                       <p class="correct-answer correct-answer2 hide"></p>
                       <button class="btn btn-check btn-check2">Check</button>
                     </div>
