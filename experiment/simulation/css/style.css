@@ -16,10 +16,10 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
-th, td {
+th,
+td {
   border: 1px solid #1c8a8a;
   text-align: center;
- 
 }
 th {
   background-color: #089b93;
@@ -368,11 +368,11 @@ h1 {
   height: 30rem;
   width: 30rem;
 }
-.graph-table{
+.graph-table {
   grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
 }
 #info {
   grid-column: 1/-1;
@@ -434,6 +434,7 @@ h1 {
 }
 .question-unit {
   align-self: center;
+  justify-self: start;
 }
 .btn-check {
   padding: 0.5rem;
@@ -491,7 +492,7 @@ h1 {
   gap: 2rem;
   border-bottom: 0.2rem solid var(--clr-title-background);
   padding: 0.5rem;
-  
+
   flex-wrap: wrap;
 }
 .temperature-group {
@@ -507,14 +508,13 @@ h1 {
   background-color: var(--clr-container-clr2);
   border: 0.15rem solid var(--clr-title-background);
 }
-.button-group{
+.button-group {
   grid-area: 1 / 1 / 2 / 4;
   display: flex;
   gap: 2rem;
   justify-content: normal;
   align-self: flex-end;
   height: 3rem;
-
 }
 .comment {
   grid-column: 1/-1;

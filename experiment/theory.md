@@ -1,11 +1,13 @@
 The Stefan–Boltzmann law describes the power radiated from a black body in terms of its temperature.
 When a hot radiating body emits energy, if it falls on a surface of another body, some of it is absorbed, some of it is transmitted through the body and the remaining is reflected.
 
-Stefan Boltzmann law states that the total energy radiated per unit surface area of a black body across all wavelengths per unit time j\* (also known as the black-body radiant emittance) is directly proportional to the fourth power of the black body's thermodynamic temperature T: <br>
+Stefan Boltzmann law states that the total energy radiated per unit surface area of a black body across all wavelengths per unit time $j^*$ (also known as the black-body radiant emittance) is directly proportional to the fourth power of the black body's thermodynamic temperature $T$:
 
 <center>
 
-![Alt text](images/1.png)
+<!-- ![Alt text](images/1.png) -->
+
+$j^* = σ T^4$
 
 </center>
 
