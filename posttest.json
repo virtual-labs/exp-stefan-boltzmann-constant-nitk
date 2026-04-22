@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "A body radiates heat at the rate of 4 cal/m2/s, when its temperature is 227°C. what is the heat radiated by the same body when its temperature is 727°C",
+      "answers": {
+        "a": "8 cal/m^2/s",
+        "b": "16 cal/m^2/s",
+        "c": "64 cal/m^2/s ",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "The right answer is (c). We know that the Power radiated is directly proportional to temperature to the power of 4. So, T1 = 227°C = 500K, T2 = 727°C = 1000K and P1 = 4 cal/m2/s. P2/P1 = (1000/500)^4. P2 = 64 cal/m2/s.",
+        "b": "The right answer is (c). We know that the Power radiated is directly proportional to temperature to the power of 4. So, T1 = 227°C = 500K, T2 = 727°C = 1000K and P1 = 4 cal/m2/s. P2/P1 = (1000/500)^4. P2 = 64 cal/m2/s.",
+        "c": "Correct, the right answer is (c). We know that the Power radiated is directly proportional to temperature to the power of 4. So, T1 = 227°C = 500K, T2 = 727°C = 1000K and P1 = 4 cal/m2/s. P2/P1 = (1000/500)^4. P2 = 64 cal/m2/s.",
+        "d": "The right answer is (c). We know that the Power radiated is directly proportional to temperature to the power of 4. So, T1 = 227°C = 500K, T2 = 727°C = 1000K and P1 = 4 cal/m2/s. P2/P1 = (1000/500)^4. P2 = 64 cal/m2/s."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "The heat transfer equation Q = σAT<sup>4</sup> is called",
+      "answers": {
+        "a": "Newton’s law",
+        "b": "Stefan-Boltzmann law",
+        "c": "Poisson law",
+        "d": "Fourier law"
+      },
+      "explanations": {
+        "a": "The right answer is (b). The heat transfer equation Q = σAT<sup>4</sup> is called Stefan-Boltzmann law. Newton's law specifies the behavior of object in motion or at rest.",
+        "b": "Correct, the right answer is (b). The heat transfer equation Q = σAT<sup>4</sup> is called Stefan-Boltzmann law. This law states that the total energy radiated per unit surface area of a black body is directly proportional to the fourth power of its absolute temperature.",
+        "c": "The right answer is (b). The heat transfer equation Q = σAT<sup>4</sup> is called Stefan-Boltzmann law. In the context of heat transfer, Poisson' law defines Poisson's equation is a partial differential equation that describes the distribution of heat (or variations in temperature) in a given region over time",
+        "d": "The right answer is (b). The heat transfer equation Q = σAT<sup>4</sup> is called Stefan-Boltzmann law. Fourier’s Law, also known as the Law of Heat Conduction, states that the rate of heat transfer through a material is proportional to the negative gradient in the temperature and the area (perpendicular to the gradient) through which the heat flows."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": " Calculate the radiant flux density from a black surface at 400 degree Celsius?",
+      "answers": {
+        "a": "1631.7 W/m^2",
+        "b": "31.7 W/m^2",
+        "c": "631.7 W/m^2",
+        "d": "11631.7 W/m^2 "
+      },
+      "explanations": {
+        "a": "The right answer is (d). E = σ T4 = 5.67 * 10^-8 * (400 + 273)4 = 11631.7 W/m2.",
+        "b": "The right answer is (d). E = σ T4 = 5.67 * 10^-8 * (400 + 273)4 = 11631.7 W/m2.",
+        "c": "The right answer is (d). E = σ T4 = 5.67 * 10^-8 * (400 + 273)4 = 11631.7 W/m2.",
+        "d": "Correct, the right answer is (d). E = σ T4 = 5.67 * 10^-8 * (400 + 273)4 = 11631.7 W/m2."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the wavelength band for solar radiation?",
+      "answers": {
+        "a": "1 * 10 ^-1 to ^3 micron meter",
+        "b": "1 * 10 ^-1 to ^2 micron meter",
+        "c": "1 * 10 ^-1 to ^1 micron meter",
+        "d": "1 * 10 ^-1 to ^10 micron meter"
+      },
+      "explanations": {
+        "a": "Correct, the right answer is (a). The wavelength band for solar radiation, also known as the solar spectrum, ranges from about 100 nm to 1 mm (1 * 10 ^-1 to ^3 micron meter).",
+        "b": "The right answer is (a). The wavelength band for solar radiation, also known as the solar spectrum, ranges from about 100 nm to 1 mm (1 * 10 ^-1 to ^3 micron meter).",
+        "c": "The right answer is (a). The wavelength band for solar radiation, also known as the solar spectrum, ranges from about 100 nm to 1 mm (1 * 10 ^-1 to ^3 micron meter).",
+        "d": "The right answer is (a). The wavelength band for solar radiation, also known as the solar spectrum, ranges from about 100 nm to 1 mm (1 * 10 ^-1 to ^3 micron meter)."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "A furnace having inside temperature of 2250K has a glass circular viewing of 6cm diameter. If the transmissivity of glass is 0.08, make calculations for the heat loss from the glass window due to radiation",
+      "answers": {
+        "a": "234.54 W",
+        "b": "652.32 W",
+        "c": "328.53 W",
+        "d": "762.32 W"
+      },
+      "explanations": {
+        "a": "The right answer is (c). Calculate the heat loss: A = Pi * (0.06/2)^2 = 0.002827m2. Transmissivity = 0.08. Stefan boltzmann's constant = 5.67*10-8W/m2K4.  Q = 0.08 * (5.67*10-8W/m2K4) * 0.002827m2 * (2250K)^4. Q ≈ 0.08 * 5.67 * 10^-8 * 0.002827 * 2.565* 10^13.  Q≈328.53W",
+        "b": "The right answer is (c). Calculate the heat loss: A = Pi * (0.06/2)^2 = 0.002827m2. Transmissivity = 0.08. Stefan boltzmann's constant = 5.67*10-8W/m2K4.  Q = 0.08 * (5.67*10-8W/m2K4) * 0.002827m2 * (2250K)^4. Q ≈ 0.08 * 5.67 * 10^-8 * 0.002827 * 2.565* 10^13.  Q≈328.53W",
+        "c": "Correct, the right answer is (c). Calculate the heat loss: A = Pi * (0.06/2)^2 = 0.002827m2. Transmissivity = 0.08. Stefan boltzmann's constant = 5.67*10-8W/m2K4.  Q = 0.08 * (5.67*10-8W/m2K4) * 0.002827m2 * (2250K)^4. Q ≈ 0.08 * 5.67 * 10^-8 * 0.002827 * 2.565* 10^13.  Q≈328.53W",
+        "d": "The right answer is (c). Calculate the heat loss: A = Pi * (0.06/2)^2 = 0.002827m2. Transmissivity = 0.08. Stefan boltzmann's constant = 5.67*10-8W/m2K4.  Q = 0.08 * (5.67*10-8W/m2K4) * 0.002827m2 * (2250K)^4. Q ≈ 0.08 * 5.67 * 10^-8 * 0.002827 * 2.565* 10^13.  Q≈328.53W"
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    }
+  ]
+}
