@@ -11,10 +11,10 @@
     <li><a href="https://www.youtube.com/watch?v=od-jgaOQ8mc">Stefan-Boltzmann Law: How Bodies Radiate Energy Through Their Temperature</a></li>
 <td>Developers:<br/> 
     <ul style="list-style-type: none;">
-     <li>Dr. K V Gangadharan | NITK</li> 
      <li>Dr. Parthasarathy P | NITK</li>
+     <li>Dr. K V Gangadharan | NITK</li> 
     </ul>
-    </br> 
+    </br>   
       Contributors :
     <ul style="list-style-type: none;">
     <li>Prasad Mandave | 181ME147 | NITK</li>
